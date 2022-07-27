@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Documento</title>
+    <script>
+         alert("Bem vindo a calculadora lacostada")
+    </script>
+</head>
+<body>
+    <div class="container ">
+        <h1 class="col text-center">Calculadora Lacostada</h1>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+
+                <div class="calc">
+                    <input type="text" class="form-control" id="resultado" disabled="disabled">
+                    <table>
+                        <tr>
+                            <td colspan="2"><button class="botao btn-lg" onclick="clean()" id="clear">C</button></td>
+                            <td><button onclick="insert('/')" class="botao btn-lg ">/</button></td>
+                            <td><button onclick="insert('*')" class="btn-lg  botao ">x</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="insert('7')" class="botao btn-lg">7</button></td>
+                            <td><button onclick="insert('8')" class="botao btn-lg">8</button></td>
+                            <td><button onclick="insert('9')" class="botao btn-lg">9</button></td>
+                            <td><button onclick="insert('-')" class="botao btn-lg">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="insert('4')" class=" botao btn-lg">4</button></td>
+                            <td><button onclick="insert('5')" class=" botao btn-lg">5</button></td>
+                            <td><button onclick="insert('6')" class=" botao btn-lg">6</button></td>
+                            <td><button onclick="insert('+')" class=" botao btn-lg">+</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="insert('1')" class=" botao btn-lg">1</button></td>
+                            <td><button onclick="insert('2')" class=" botao btn-lg">2</button></td>
+                            <td><button onclick="insert('3')" class=" botao btn-lg">3</button></td>
+                            <td rowspan="2"><button class=" botao btn-lg " id="igual" onclick="calcular()">=</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button onclick="insert('0')" class="botao btn-lg" id="zero">0</button>
+                            </td>
+                            <td><button onclick="insert('.')" class="botao btn-lg">.</button></td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script>
+        function insert(num) {
+            var numero = document.getElementById('resultado').value;
+            document.getElementById('resultado').value = numero + num;
+        }
+
+        function clean() {
+            document.getElementById('resultado').value = "";
+        }
+
+        function calcular() {
+            var resultado = document.getElementById('resultado').value;
+
+            if (resultado) {
+                document.getElementById('resultado').value = eval(resultado);
+            }
+            else {
+                document.getElementById('resultado').value = "erro";
+            }
+        }
+        //Bootstrap
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

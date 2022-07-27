@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.fundo{
+    background-image: linear-gradient(45deg, black,blue) ;
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.calc{
+
+    margin-top: 20px;
+    border: solid 1px black;
+    padding: 15px;
+    box-shadow: 1px 1px 5px #000;
+    border-radius: 10px;
+    background-color: #D496BA;
+    background-image: url(imagens/lac.jpg);
+    
+}
+#resultado {
+    width: 230px;
+    text-align: right;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: solid 1px #000;
+    box-shadow: 1px 1px 1px #000;
+}
+.botao{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(0,51,0);
+    border: none;
+    margin: 3px;
+    background: rgba(0,51,0, 0.97);
+}
+#zero{
+    width: 106px ;
+}
+#igual{
+    height: 106px;
+}
+#clear{
+    width: 106px;
+}
+
+
+
+
+
+
+
+
+
